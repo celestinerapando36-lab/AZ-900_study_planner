@@ -167,7 +167,10 @@ const TOPICS = [
     tip: "Compare Azure Advisor, Service Health, Azure Monitor, alerts, Log Analytics, and Application Insights.",
   },
 ];
-
+//Make topics available in the broswer.
+if (typeof window!== "undefined") {
+  window.TOPICS = TOPICS;
+}
 // Make the topic list available to other JavaScript files using Node.js.
 if (typeof module !== "undefined" && module.exports) {
   module.exports = { TOPICS };
